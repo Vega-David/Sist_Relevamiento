@@ -1,0 +1,74 @@
+Funcion para crear PDF es la siguiente y se puede modificar claramente
+
+function crearPDF(){
+    const { jsPDF } = window.jspdf;
+
+    const doc = new jsPDF();
+
+    doc.text("Hola! Este es un PDF generado con jsPDF.", 10, 10);
+    doc.text("Podés agregar más líneas, imágenes, tablas, etc.", 10, 20);
+    let textoLargo = doc.splitTextToSize("Este es un texto que será envuelto automáticamente si es muy largo...", 180);
+    doc.text(textoLargo, 10, 40);
+    doc.autoTable({
+        head: [['Nombre', 'Edad']],
+        body: [['Juan', 28], ['Ana', 33]]
+    });
+    doc.save("documento.pdf");
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+Funcion para crear excel es la siguiente
+
+function crearExcel(){
+    // Datos como array de objetos
+      const data = [
+        { Producto: "Tornillo", Cantidad: 100, Precio: 50 },
+        { Producto: "Tuerca", Cantidad: 200, Precio: 30 }
+      ];
+
+      // Convertir a hoja de Excel
+      const worksheet = XLSX.utils.json_to_sheet(data);
+
+      // Crear libro y agregar la hoja
+      const workbook = XLSX.utils.book_new();
+      XLSX.utils.book_append_sheet(workbook, worksheet, "Stock");
+
+      // Descargar el archivo
+      XLSX.writeFile(workbook, "reporte-stock.xlsx");
+}
+
+Con esta funcion el excel se crea con varias hojas
+
+function generarExcel() {
+      // ➤ Datos para hoja 1
+      const stock = [
+        { Producto: "Tornillo", Cantidad: 100, Precio: 50 },
+        { Producto: "Tuerca", Cantidad: 200, Precio: 30 }
+      ];
+      const hojaStock = XLSX.utils.json_to_sheet(stock);
+
+      // ➤ Datos para hoja 2
+      const pedidos = [
+        { Cliente: "Juan", Producto: "Tornillo", Cantidad: 10 },
+        { Cliente: "Ana", Producto: "Tuerca", Cantidad: 20 }
+      ];
+      const hojaPedidos = XLSX.utils.json_to_sheet(pedidos);
+
+      // ➤ Crear el libro
+      const libro = XLSX.utils.book_new();
+
+      // ➤ Agregar las hojas al libro
+      XLSX.utils.book_append_sheet(libro, hojaStock, "Stock");
+      XLSX.utils.book_append_sheet(libro, hojaPedidos, "Pedidos");
+
+      // ➤ Guardar archivo
+      XLSX.writeFile(libro, "inventario_multiples_hojas.xlsx");
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------
+fString
+`${}`
+----------------------------------------------------------------------------------------------------------------------------------------
+Para obtener la fecha en formato dd/mm/aaaa es el siguiente codigo
+ let Fecha=new Date().toLocaleDateString('es-AR');

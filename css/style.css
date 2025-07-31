@@ -1,0 +1,119 @@
+/* VARIABLES */
+:root {
+  --color-bg: #102B52;
+  --color-primary: #005489;
+  --color-secondary: #71CFEB;
+  --color-text: #EAEAEA;
+  --color-gray: #808080;
+  --font-main: 'Exo 2', sans-serif;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* GENERAL */
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+/* CAMPOS DE TEXTO Y NÚMERO */
+.input-campo {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 1rem;
+  padding: 0.7rem;
+  border: 1px solid var(--color-gray);
+  border-radius: 6px;
+  background-color: transparent;
+  color: var(--color-text);
+  transition: all 0.3s ease;
+}
+
+.input-campo::placeholder {
+  color: var(--color-gray);
+}
+
+.input-campo:focus {
+  outline: none;
+  border-color: var(--color-secondary);
+  box-shadow: 0 0 5px var(--color-secondary);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* TÍTULO DE RADIO */
+.estado-label {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: var(--color-secondary);
+}
+
+/* RADIO BUTTON */
+.radio-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.input-radio {
+  margin-right: 0.5rem;
+  transform: scale(1.2);
+  accent-color: var(--color-secondary);
+}
+
+/* BOTONES */
+.btn {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.7rem;
+  margin-bottom: 1rem;
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-bg);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(113, 207, 235, 0.3);
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  body {
+    padding: 1rem;
+  }
+
+  .input-campo,
+  .btn {
+    max-width: 90%;
+  }
+}
+.estado-box {
+  width: 100%;
+  max-width: 400px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--color-gray);
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.03);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}

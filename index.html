@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relevamiento</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <label for="Nombre">Nombre</label>
+    <input type="text" name="Nombre" id="Nombre" placeholder="Nombre" class="input-campo">
+    <label for="Caracteristica">Caracteristica</label>
+    <input type="text" name="Caracteristica" id="Caracteristica" placeholder="Caracteristica" class="input-campo">
+    <label for="Codigo">Codigo</label>
+    <input type="text" name="Codigo" id="Codigo" placeholder="Codigo" class="input-campo">
+
+    <div class="estado-box">
+    <p class="estado-label">Estado del elemento</p>
+    
+    <label class="radio-label">
+        <input type="radio" name="Estado" class="input-radio" value="Aprobado"> En correcto estado
+    </label>
+    <label class="radio-label">
+        <input type="radio" name="Estado" class="input-radio" value="Rechazado"> Desgaste/Roto
+    </label>
+    </div>
+
+    <label for="Relevador">Relevador</label>
+    <input type="text" name="Relevador" id="Relevador" placeholder="Relevador" class="input-campo">
+    <label for="Cuadrilla">Cuadrilla</label>
+    <input type="number" name="Cuadrilla" id="Cuadrilla" placeholder="Cuadrilla" class="input-campo">
+
+    <button id="Cargar" class="btn">Cargar Elemento</button>
+    <button id="CrearPDF" class="btn">Crear PDF</button>
+    <button id="CrearExcel" class="btn">Crear Excel</button>
+    <button id="Guardar" class="btn">Guardar</button>
+    <a href="https://docs.google.com/document/d/e/2PACX-1vTkoKRQgCDm7vHD3SGMHNQ5ld7OZXocLRtOhuOcFEOzrgUwKFe0mgfU0_VBNIgFXzuphWFO2Tz8zCLJ/pub" target="_blank"><button class="btn">Revisar Procedimiento</button></a>
+
+    
+    <!-- Aplicacion Propia -->
+    <script src="app2.js"></script>
+    <!-- Script para generar pdf -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+    <!-- Script para generar excel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
+</body>
+</html>
