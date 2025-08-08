@@ -1,0 +1,42 @@
+{
+  "variables": {
+    "descripcion": "Variables CSS para colores y tipografía principal. Facilitan la personalización y el mantenimiento del tema visual.",
+    "ejemplo": ":root { --color-bg, --color-primary, --color-secondary, --color-text, --color-gray, --font-main }"
+  },
+  "reset": {
+    "descripcion": "Reset de márgenes, padding y box-sizing para asegurar consistencia entre navegadores.",
+    "ejemplo": "* { margin: 0; padding: 0; box-sizing: border-box; }"
+  },
+  "body": {
+    "descripcion": "Estilos generales del body: tipografía, color de fondo, color de texto, layout centrado y padding.",
+    "ejemplo": "body { font-family, background-color, color, display, flex-direction, align-items, justify-content, min-height, padding }"
+  },
+  "inputs": {
+    "descripcion": "Estilos para campos de texto y número. Incluye tamaño, bordes, colores, transiciones y placeholders.",
+    "ejemplo": ".input-campo, .input-campo::placeholder, .input-campo:focus"
+  },
+  "radio": {
+    "descripcion": "Estilos para títulos y opciones de radio. Incluye etiquetas, inputs y colores personalizados.",
+    "ejemplo": ".estado-label, .radio-label, .input-radio"
+  },
+  "botones": {
+    "descripcion": "Estilos para botones principales. Incluye tamaño, colores, bordes, efectos hover y transiciones.",
+    "ejemplo": ".btn, .btn:hover"
+  },
+  "responsive": {
+    "descripcion": "Reglas para adaptar el diseño a pantallas pequeñas (máx 600px). Ajusta padding y ancho de inputs/botones.",
+    "ejemplo": "@media (max-width: 600px) { ... }"
+  },
+  "componentes": {
+    "descripcion": "Estilos para cajas de estado o componentes reutilizables. Incluye bordes, padding, fondo y sombra.",
+    "ejemplo": ".estado-box"
+  },
+  "recomendaciones_futuras": [
+    "Centralizar todas las variables en :root para facilitar cambios globales.",
+    "Usar clases reutilizables y nombres semánticos para componentes nuevos.",
+    "Agregar variables para tamaños (espaciados, fuentes) si se requiere mayor flexibilidad.",
+    "Considerar el uso de mixins o utilidades CSS para patrones repetitivos.",
+    "Mantener la estructura modular: separar estilos por componentes o secciones si el proyecto crece.",
+    "Documentar cada nueva clase o sección para facilitar el trabajo en equipo."
+  ]
+}
