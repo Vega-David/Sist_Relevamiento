@@ -8,7 +8,7 @@
 </head>
 <body>
     
-    <label for="Nombre">Nombre</label>
+    <label for="Nombre">Nombre del Elemento</label>
     <input type="text" name="Nombre" id="Nombre" placeholder="Nombre" class="input-campo">
     <label for="Caracteristica">Caracteristica</label>
     <input type="text" name="Caracteristica" id="Caracteristica" placeholder="Caracteristica" class="input-campo">
@@ -16,7 +16,7 @@
     <input type="text" name="Codigo" id="Codigo" placeholder="Codigo" class="input-campo">
 
     <div class="estado-box">
-    <p class="estado-label">Estado del elemento</p>
+    <p class="estado-label">Estado del Elemento</p>
     
     <label class="radio-label">
         <input type="radio" name="Estado" class="input-radio" value="Aprobado"> En correcto estado
@@ -26,15 +26,17 @@
     </label>
     </div>
 
-    <label for="Relevador">Relevador</label>
+    <label for="Relevador">Nombre del Relevador</label>
     <input type="text" name="Relevador" id="Relevador" placeholder="Relevador" class="input-campo">
     <label for="Cuadrilla">Cuadrilla</label>
     <input type="number" name="Cuadrilla" id="Cuadrilla" placeholder="Cuadrilla" class="input-campo">
 
     <button id="Cargar" class="btn">Cargar Elemento</button>
+    <button id="Guardar" class="btn">Guardar</button>
+    <i>(Para generar pdf y excel primero guardar los elementos cargados)</i>
+    <br>
     <button id="CrearPDF" class="btn">Crear PDF</button>
     <button id="CrearExcel" class="btn">Crear Excel</button>
-    <button id="Guardar" class="btn">Guardar</button>
     <a href="https://drive.google.com/file/d/1OXeb5wIpg_vXUASn5zqLkUnW3PlSS15i/view?usp=sharing" target="_blank"><button class="btn">Revisar Procedimientos</button></a>
     <a href="https://docs.google.com/document/d/e/2PACX-1vTkoKRQgCDm7vHD3SGMHNQ5ld7OZXocLRtOhuOcFEOzrgUwKFe0mgfU0_VBNIgFXzuphWFO2Tz8zCLJ/pub" target="_blank"><button class="btn">Criterio de Descarte</button></a>
 
