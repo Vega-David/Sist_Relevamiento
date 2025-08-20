@@ -7,40 +7,61 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
-    <label for="Nombre">Nombre del Elemento</label>
-    <input type="text" name="Nombre" id="Nombre" placeholder="Nombre" class="input-campo">
-    <label for="Caracteristica">Caracteristica</label>
-    <input type="text" name="Caracteristica" id="Caracteristica" placeholder="Caracteristica" class="input-campo">
-    <label for="Codigo">Codigo</label>
-    <input type="text" name="Codigo" id="Codigo" placeholder="Codigo" class="input-campo">
-
-    <div class="estado-box">
-    <p class="estado-label">Estado del Elemento</p>
-    
-    <label class="radio-label">
-        <input type="radio" name="Estado" class="input-radio" value="Aprobado"> En correcto estado
-    </label>
-    <label class="radio-label">
-        <input type="radio" name="Estado" class="input-radio" value="Rechazado"> Desgaste/Roto
-    </label>
+    <div class="parent">
+        <!-- 1: Título -->
+        <div class="div1">
+            <h1>Relevamiento de Elementos</h1>
+        </div>
+        <!-- 2: Formulario -->
+        <div class="div2">
+            <form id="formulario" onsubmit="return false;">
+                <label for="Nombre">Nombre del Elemento</label>
+                <input type="text" name="Nombre" id="Nombre" placeholder="Nombre" class="input-campo">
+                <label for="Caracteristica">Caracteristica</label>
+                <input type="text" name="Caracteristica" id="Caracteristica" placeholder="Caracteristica" class="input-campo">
+                <label for="Codigo">Codigo</label>
+                <input type="text" name="Codigo" id="Codigo" placeholder="Codigo" class="input-campo">
+                <div class="estado-box">
+                    <p class="estado-label">Estado del Elemento</p>
+                    <label class="radio-label">
+                        <input type="radio" name="Estado" class="input-radio" value="Aprobado"> En correcto estado
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="Estado" class="input-radio" value="Rechazado"> Desgaste/Roto
+                    </label>
+                </div>
+                <label for="Relevador">Nombre del Relevador</label>
+                <input type="text" name="Relevador" id="Relevador" placeholder="Relevador" class="input-campo">
+                <label for="Cuadrilla">Cuadrilla</label>
+                <input type="number" name="Cuadrilla" id="Cuadrilla" placeholder="Cuadrilla" class="input-campo">
+                <button id="Cargar" class="btn" type="button">Cargar Elemento</button>
+                <button id="Guardar" class="btn" type="button">Guardar</button>
+            </form>
+        </div>
+        <!-- 3: Tabla dinámica expandida -->
+        <div class="div3 div3-expandida">
+            <h2>Elementos Cargados</h2>
+            <div id="tabla-dinamica"></div>
+        </div>
+        <!-- Menú desplegable de acciones -->
+        <div class="menu-dropdown">
+            <button id="menu-toggle" class="menu-btn">☰ Opciones</button>
+            <div id="menu-content" class="menu-content">
+                <span style="font-size:0.95em;color:#b0c4de;margin-bottom:0.5em;">(Para generar pdf y excel primero guardar los elementos cargados)</span>
+                <button id="CrearPDF" class="btn">Crear PDF</button>
+                <button id="CrearExcel" class="btn">Crear Excel</button>
+                <a href="https://drive.google.com/file/d/1OXeb5wIpg_vXUASn5zqLkUnW3PlSS15i/view?usp=sharing" target="_blank"><button class="btn">Revisar Procedimientos</button></a>
+                <a href="https://docs.google.com/document/d/e/2PACX-1vTkoKRQgCDm7vHD3SGMHNQ5ld7OZXocLRtOhuOcFEOzrgUwKFe0mgfU0_VBNIgFXzuphWFO2Tz8zCLJ/pub" target="_blank"><button class="btn">Criterio de Descarte</button></a>
+            </div>
+        </div>
+        <!-- 5: Footer -->
+        <div class="div5">
+            <footer>
+                <!-- Aquí puedes agregar información de contacto, copyright, etc. -->
+                <span id="footer-info">Footer informativo</span>
+            </footer>
+        </div>
     </div>
-
-    <label for="Relevador">Nombre del Relevador</label>
-    <input type="text" name="Relevador" id="Relevador" placeholder="Relevador" class="input-campo">
-    <label for="Cuadrilla">Cuadrilla</label>
-    <input type="number" name="Cuadrilla" id="Cuadrilla" placeholder="Cuadrilla" class="input-campo">
-
-    <button id="Cargar" class="btn">Cargar Elemento</button>
-    <button id="Guardar" class="btn">Guardar</button>
-    <i>(Para generar pdf y excel primero guardar los elementos cargados)</i>
-    <br>
-    <button id="CrearPDF" class="btn">Crear PDF</button>
-    <button id="CrearExcel" class="btn">Crear Excel</button>
-    <a href="https://drive.google.com/file/d/1OXeb5wIpg_vXUASn5zqLkUnW3PlSS15i/view?usp=sharing" target="_blank"><button class="btn">Revisar Procedimientos</button></a>
-    <a href="https://docs.google.com/document/d/e/2PACX-1vTkoKRQgCDm7vHD3SGMHNQ5ld7OZXocLRtOhuOcFEOzrgUwKFe0mgfU0_VBNIgFXzuphWFO2Tz8zCLJ/pub" target="_blank"><button class="btn">Criterio de Descarte</button></a>
-
-    
 
     <!-- Librerías externas -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
@@ -49,6 +70,5 @@
 
     <!-- Módulos JS propios -->
     <script type="module" src="js/main.js"></script>
-
 </body>
 </html>
